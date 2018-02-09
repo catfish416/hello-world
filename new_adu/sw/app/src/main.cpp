@@ -22,7 +22,7 @@ extern "C" {
 #define SPI_INTERVAL_TIME   (300)
 #define SPI_SHIFT_TIMES     (8)
 #define MAX_DATA_NUM        (3000)
-#define TC297_channel       (0x03)
+#define TC297_channel       (0x00)
 #define DATA_NUM_PER_MSG    (3)
 #define DATA_MAGIC_NUM (0xAABBCCDD)
 #define MAX_FAIL_TIMES      (3)
@@ -45,6 +45,7 @@ extern "C" {
 #define CHECK_TEST_DONE_PER_10_SEC  (10)
 #define BAR_WIDTH_PX        400
 #define ERR_RETRY_TIMES     3
+#define SPEED_VAL_100X      100
 
 #define DATA_TXT_FILE       "/var/www/cgi-bin/test.txt"
 #define LOG_SWITCH_FILE     "/var/www/cgi-bin/log_on"
@@ -56,6 +57,12 @@ extern "C" {
 #define BG_PIC_ADDR             "http://169.254.108.250/pic/srdc.jpg"
 
 bool g_log_on = false;
+
+typedef struct test_data
+{
+    int time_sec;
+    float speed_data;
+}s_test_data;
 
 typedef struct machine_status
 {
@@ -320,8 +327,6 @@ reopen:
         goto reopen;
     }
 retry:
-    //SPI_Close(TC297_channel);  // ensure to open SPI success
-
     SPI_Config_T spi_config = DRV_SPI_CFG;
     if (-1 == SPI_Open(TC297_channel, &spi_config))
     {
@@ -330,58 +335,47 @@ retry:
         return ret;
     }
 
-    int i = 0;
-    int speed_num = 0;
+    int index       = 0;
+    int msg_ID      = 0;
+    int speed_num   = 0;
 
-    int ch;
-    char str[MAX_MSG_DATA_LEN];
+    size_t len  = 0;
+    size_t read = 0;
+    unsigned int speed_val_100x = 0;
+    char *pline = NULL;
 
-    float speed_data[MAX_DATA_NUM] = {0};
-    int index = 0;
-    int msg_ID = 0;
+    s_test_data data_buf[MAX_DATA_NUM] = {0};
 
-    while((ch = fgetc(fp)) != EOF)
-    {   
-        if(ch == '\t'  || ch =='\n') 
+    fseek(fp, 0, SEEK_SET);
+    if ((read = getline(&pline, &len, fp)) != -1)   // jump first line
+    {
+        while ((read = getline(&pline, &len, fp)) != -1)
         {
-            if(i > 0)
+            sscanf(pline, "%d%f", &data_buf[speed_num].time_sec, &data_buf[speed_num].speed_data);
+            speed_val_100x = (unsigned int)(data_buf[speed_num++].speed_data * 100);
+            //speed_num++;
+            free(pline);
+            pline = NULL;
+
+            g_array[index++] = speed_val_100x;
+            if ((index % DATA_NUM_PER_MSG) == 0)
             {
-                str[i++] = '\0';
-                i = 0;
-                speed_data[speed_num] = atof(str);
-                unsigned int speed_val_100x = (unsigned int)(speed_data[speed_num] * 100);
-                //printf("100x = %d\n", send_100x);
-                g_array[index] = speed_val_100x;
-                index++;
-                if ((index % DATA_NUM_PER_MSG) == 0)
+                Frame_Type msg;
+                (void)memset(&msg, 0, sizeof(msg));
+                transmit_SPI_message(&msg, msg_ID++);
+                if (SPI_Transfer(TC297_channel, &msg, NULL, sizeof(msg)) != true)
                 {
-                    Frame_Type msg;
-                    (void)memset(&msg, 0, sizeof(msg));
-                    transmit_SPI_message(&msg, msg_ID);
-                    if (SPI_Transfer(TC297_channel, &msg, NULL, sizeof(msg)) != true)
-                    {
-                        printf("%s: spi transfer fail!\n", __FUNCTION__);
-                        return ret;
-                    }
-                    index = 0;
-                    msg_ID++;
-                    usleep(SPI_INTERVAL_TIME);
+                    printf("%s: spi transfer fail!\n", __FUNCTION__);
+                    return ret;
                 }
-                speed_num++;
+                index = 0;
+                usleep(SPI_INTERVAL_TIME);
             }
         }
-        else
-        {
-           str[i++] = (unsigned char)ch;
-        }
     }
-    // for debug
-    if ((ch = fgetc(fp)) == EOF)
-        ShowErrorInfo("end of while<BR>");
-
     usleep(SPI_INTERVAL_TIME);
-    /* check TC297 if recv_num == send_num */
 
+    /* check TC297 if recv_num == send_num */
     int recv_num = 0;
     uint8_t recv[MAX_MSG_DATA_LEN] = {0};
     if (send_mcu_cmd(QUERY_CMD, recv, MAX_MSG_DATA_LEN) < 0)
