@@ -46,6 +46,7 @@ extern "C" {
 #define BAR_WIDTH_PX        400
 #define ERR_RETRY_TIMES     3
 #define SPEED_VAL_100X      100
+#define MAX_SPEED_LIMIT     300
 
 #define DATA_TXT_FILE       "/var/www/cgi-bin/test.txt"
 #define LOG_SWITCH_FILE     "/var/www/cgi-bin/log_on"
@@ -357,6 +358,11 @@ retry:
             free(pline);
             pline = NULL;
 
+            if (speed_val_100x > SPEED_VAL_100X * MAX_SPEED_LIMIT)
+            {
+                printf("Speed value %f over MAX: %d, please check test.txt<BR>",
+                    data_buf[speed_num++].speed_data, MAX_SPEED_LIMIT);
+            }
             g_array[index++] = speed_val_100x;
             if ((index % DATA_NUM_PER_MSG) == 0)
             {

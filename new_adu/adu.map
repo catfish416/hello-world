@@ -155,7 +155,7 @@ LOAD /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../
  *(.iplt)
  .iplt          0x0000000000000000        0x0 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crt1.o
 
-.text           0x0000000000400e50     0x1c78
+.text           0x0000000000400e50     0x1c98
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
@@ -201,164 +201,164 @@ LOAD /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../
                 0x0000000000401898      0x188 out/Adu/obj/sw/app/src/main.o
                 0x0000000000401898                send_mcu_cmd
  .text.send_TC297_data
-                0x0000000000401a20      0x38c out/Adu/obj/sw/app/src/main.o
+                0x0000000000401a20      0x3ac out/Adu/obj/sw/app/src/main.o
                 0x0000000000401a20                send_TC297_data
  .text.check_start_cmd_FMS
-                0x0000000000401dac       0xa0 out/Adu/obj/sw/app/src/main.o
-                0x0000000000401dac                check_start_cmd_FMS
+                0x0000000000401dcc       0xa0 out/Adu/obj/sw/app/src/main.o
+                0x0000000000401dcc                check_start_cmd_FMS
  .text.check_stop_cmd_FMS
-                0x0000000000401e4c       0x88 out/Adu/obj/sw/app/src/main.o
-                0x0000000000401e4c                check_stop_cmd_FMS
+                0x0000000000401e6c       0x88 out/Adu/obj/sw/app/src/main.o
+                0x0000000000401e6c                check_stop_cmd_FMS
  .text.check_transfor_cmd_FMS
-                0x0000000000401ed4       0x84 out/Adu/obj/sw/app/src/main.o
-                0x0000000000401ed4                check_transfor_cmd_FMS
+                0x0000000000401ef4       0x84 out/Adu/obj/sw/app/src/main.o
+                0x0000000000401ef4                check_transfor_cmd_FMS
  .text.check_cmd_FMS
-                0x0000000000401f58       0x50 out/Adu/obj/sw/app/src/main.o
-                0x0000000000401f58                check_cmd_FMS
+                0x0000000000401f78       0x50 out/Adu/obj/sw/app/src/main.o
+                0x0000000000401f78                check_cmd_FMS
  .text.check_test_done
-                0x0000000000401fa8       0x90 out/Adu/obj/sw/app/src/main.o
-                0x0000000000401fa8                check_test_done
+                0x0000000000401fc8       0x90 out/Adu/obj/sw/app/src/main.o
+                0x0000000000401fc8                check_test_done
  .text.print_cur_time
-                0x0000000000402038       0x3c out/Adu/obj/sw/app/src/main.o
-                0x0000000000402038                print_cur_time
- .text          0x0000000000402074        0x0 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x0000000000402058       0x3c out/Adu/obj/sw/app/src/main.o
+                0x0000000000402058                print_cur_time
+ .text          0x0000000000402094        0x0 sw/osal_hal/liboal_hal.a(ipcl.o)
  .text.W_Queue_Massage
-                0x0000000000402074       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x0000000000402074                W_Queue_Massage
+                0x0000000000402094       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x0000000000402094                W_Queue_Massage
  .text.r_t_Queue_Massage
-                0x000000000040209c       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x000000000040209c                r_t_Queue_Massage
+                0x00000000004020bc       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x00000000004020bc                r_t_Queue_Massage
  .text.W_Dequeue_Massage
-                0x00000000004020c4       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x00000000004020c4                W_Dequeue_Massage
+                0x00000000004020e4       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x00000000004020e4                W_Dequeue_Massage
  .text.R_t_Dequeue_Massage
-                0x00000000004020ec       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x00000000004020ec                R_t_Dequeue_Massage
+                0x000000000040210c       0x28 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x000000000040210c                R_t_Dequeue_Massage
  .text.W_Getqueue_Massage
-                0x0000000000402114       0x20 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x0000000000402114                W_Getqueue_Massage
- .text.R_t_Getqueue_Massage
                 0x0000000000402134       0x20 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x0000000000402134                R_t_Getqueue_Massage
+                0x0000000000402134                W_Getqueue_Massage
+ .text.R_t_Getqueue_Massage
+                0x0000000000402154       0x20 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x0000000000402154                R_t_Getqueue_Massage
  .text.Search_w_queue
-                0x0000000000402154       0x58 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x0000000000402154                Search_w_queue
+                0x0000000000402174       0x58 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x0000000000402174                Search_w_queue
  .text.Search_r_t_queue
-                0x00000000004021ac       0x58 sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x00000000004021ac                Search_r_t_queue
+                0x00000000004021cc       0x58 sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x00000000004021cc                Search_r_t_queue
  .text.transmit_message
-                0x0000000000402204       0xfc sw/osal_hal/liboal_hal.a(ipcl.o)
-                0x0000000000402204                transmit_message
- .text          0x0000000000402300        0x0 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x0000000000402224       0xfc sw/osal_hal/liboal_hal.a(ipcl.o)
+                0x0000000000402224                transmit_message
+ .text          0x0000000000402320        0x0 sw/osal_hal/liboal_hal.a(spi_linux.o)
  .text.SPI_Initialize
-                0x0000000000402300       0x58 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x0000000000402320       0x58 sw/osal_hal/liboal_hal.a(spi_linux.o)
  .text.SPI_Open
-                0x0000000000402358      0x234 sw/osal_hal/liboal_hal.a(spi_linux.o)
-                0x0000000000402358                SPI_Open
+                0x0000000000402378      0x234 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x0000000000402378                SPI_Open
  .text.SPI_Close
-                0x000000000040258c       0xac sw/osal_hal/liboal_hal.a(spi_linux.o)
-                0x000000000040258c                SPI_Close
+                0x00000000004025ac       0xac sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x00000000004025ac                SPI_Close
  .text.SPI_Write
-                0x0000000000402638       0x74 sw/osal_hal/liboal_hal.a(spi_linux.o)
-                0x0000000000402638                SPI_Write
+                0x0000000000402658       0x74 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x0000000000402658                SPI_Write
  .text.SPI_Read
-                0x00000000004026ac       0x74 sw/osal_hal/liboal_hal.a(spi_linux.o)
-                0x00000000004026ac                SPI_Read
+                0x00000000004026cc       0x74 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x00000000004026cc                SPI_Read
  .text.SPI_Transfer
-                0x0000000000402720       0x74 sw/osal_hal/liboal_hal.a(spi_linux.o)
-                0x0000000000402720                SPI_Transfer
- .text          0x0000000000402794        0x0 sw/osal_hal/liboal_hal.a(CRC8.o)
+                0x0000000000402740       0x74 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x0000000000402740                SPI_Transfer
+ .text          0x00000000004027b4        0x0 sw/osal_hal/liboal_hal.a(CRC8.o)
  .text.CRC8_function
-                0x0000000000402794       0x48 sw/osal_hal/liboal_hal.a(CRC8.o)
-                0x0000000000402794                CRC8_function
+                0x00000000004027b4       0x48 sw/osal_hal/liboal_hal.a(CRC8.o)
+                0x00000000004027b4                CRC8_function
  .text.Getcrc_Master
-                0x00000000004027dc       0x90 sw/osal_hal/liboal_hal.a(CRC8.o)
-                0x00000000004027dc                Getcrc_Master
+                0x00000000004027fc       0x90 sw/osal_hal/liboal_hal.a(CRC8.o)
+                0x00000000004027fc                Getcrc_Master
  .text.Getcrc_Slave
-                0x000000000040286c       0xa4 sw/osal_hal/liboal_hal.a(CRC8.o)
-                0x000000000040286c                Getcrc_Slave
- .text          0x0000000000402910        0x0 sw/osal_hal/liboal_hal.a(hal_plock.o)
+                0x000000000040288c       0xa4 sw/osal_hal/liboal_hal.a(CRC8.o)
+                0x000000000040288c                Getcrc_Slave
+ .text          0x0000000000402930        0x0 sw/osal_hal/liboal_hal.a(hal_plock.o)
  .text.HAL_Create_PMutex
-                0x0000000000402910       0xac sw/osal_hal/liboal_hal.a(hal_plock.o)
-                0x0000000000402910                HAL_Create_PMutex
+                0x0000000000402930       0xac sw/osal_hal/liboal_hal.a(hal_plock.o)
+                0x0000000000402930                HAL_Create_PMutex
  .text.HAL_Try_Lock_PMutex
-                0x00000000004029bc       0x20 sw/osal_hal/liboal_hal.a(hal_plock.o)
-                0x00000000004029bc                HAL_Try_Lock_PMutex
- .text.HAL_Lock_PMutex
                 0x00000000004029dc       0x20 sw/osal_hal/liboal_hal.a(hal_plock.o)
-                0x00000000004029dc                HAL_Lock_PMutex
- .text.HAL_Unlock_PMutex
+                0x00000000004029dc                HAL_Try_Lock_PMutex
+ .text.HAL_Lock_PMutex
                 0x00000000004029fc       0x20 sw/osal_hal/liboal_hal.a(hal_plock.o)
-                0x00000000004029fc                HAL_Unlock_PMutex
+                0x00000000004029fc                HAL_Lock_PMutex
+ .text.HAL_Unlock_PMutex
+                0x0000000000402a1c       0x20 sw/osal_hal/liboal_hal.a(hal_plock.o)
+                0x0000000000402a1c                HAL_Unlock_PMutex
  .text.HAL_Destroy_PMutex
-                0x0000000000402a1c       0x2c sw/osal_hal/liboal_hal.a(hal_plock.o)
-                0x0000000000402a1c                HAL_Destroy_PMutex
+                0x0000000000402a3c       0x2c sw/osal_hal/liboal_hal.a(hal_plock.o)
+                0x0000000000402a3c                HAL_Destroy_PMutex
  .text.HAL_Util_Once
-                0x0000000000402a48        0x4 sw/osal_hal/liboal_hal.a(hal_plock.o)
-                0x0000000000402a48                HAL_Util_Once
- .text          0x0000000000402a4c       0x7c /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/libc_nonshared.a(elf-init.oS)
-                0x0000000000402a4c                __libc_csu_init
-                0x0000000000402ac4                __libc_csu_fini
- .text          0x0000000000402ac8        0x0 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../lib/gcc/aarch64-linux-gnu/4.9.1/crtend.o
- .text          0x0000000000402ac8        0x0 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crtn.o
+                0x0000000000402a68        0x4 sw/osal_hal/liboal_hal.a(hal_plock.o)
+                0x0000000000402a68                HAL_Util_Once
+ .text          0x0000000000402a6c       0x7c /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                0x0000000000402a6c                __libc_csu_init
+                0x0000000000402ae4                __libc_csu_fini
+ .text          0x0000000000402ae8        0x0 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../lib/gcc/aarch64-linux-gnu/4.9.1/crtend.o
+ .text          0x0000000000402ae8        0x0 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crtn.o
  *(.gnu.warning)
 
-.fini           0x0000000000402ac8       0x10
+.fini           0x0000000000402ae8       0x10
  *(SORT(.fini))
- .fini          0x0000000000402ac8        0x8 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crti.o
-                0x0000000000402ac8                _fini
- .fini          0x0000000000402ad0        0x8 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crtn.o
-                0x0000000000402ad8                PROVIDE (__etext, .)
-                0x0000000000402ad8                PROVIDE (_etext, .)
-                0x0000000000402ad8                PROVIDE (etext, .)
+ .fini          0x0000000000402ae8        0x8 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crti.o
+                0x0000000000402ae8                _fini
+ .fini          0x0000000000402af0        0x8 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crtn.o
+                0x0000000000402af8                PROVIDE (__etext, .)
+                0x0000000000402af8                PROVIDE (_etext, .)
+                0x0000000000402af8                PROVIDE (etext, .)
 
-.rodata         0x0000000000402ae0      0xa50
+.rodata         0x0000000000402b00      0xa80
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata.cst4   0x0000000000402ae0        0x4 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crt1.o
-                0x0000000000402ae0                _IO_stdin_used
- *fill*         0x0000000000402ae4        0x4 
+ .rodata.cst4   0x0000000000402b00        0x4 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../aarch64-linux-gnu/libc/usr/lib/aarch64-linux-gnu/crt1.o
+                0x0000000000402b00                _IO_stdin_used
+ *fill*         0x0000000000402b04        0x4 
  .rodata.str1.8
-                0x0000000000402ae8      0x89a out/Adu/obj/sw/app/src/main.o
-                                        0x8a8 (size before relaxing)
- *fill*         0x0000000000403382        0xe 
+                0x0000000000402b08      0x8d2 out/Adu/obj/sw/app/src/main.o
+                                        0x8e0 (size before relaxing)
+ *fill*         0x00000000004033da        0x6 
  .rodata._ZZ15send_TC297_dataE12__FUNCTION__
-                0x0000000000403390       0x10 out/Adu/obj/sw/app/src/main.o
- .rodata._ZZ13check_cmd_FMSE12__FUNCTION__
-                0x00000000004033a0       0x10 out/Adu/obj/sw/app/src/main.o
- .rodata._ZZ12recv_SPI_msgE12__FUNCTION__
-                0x00000000004033b0       0x10 out/Adu/obj/sw/app/src/main.o
- .rodata._ZZ17clear_spi_channelE12__FUNCTION__
-                0x00000000004033c0       0x20 out/Adu/obj/sw/app/src/main.o
- .rodata._ZZ12send_mcu_cmdE12__FUNCTION__
                 0x00000000004033e0       0x10 out/Adu/obj/sw/app/src/main.o
+ .rodata._ZZ13check_cmd_FMSE12__FUNCTION__
+                0x00000000004033f0       0x10 out/Adu/obj/sw/app/src/main.o
+ .rodata._ZZ12recv_SPI_msgE12__FUNCTION__
+                0x0000000000403400       0x10 out/Adu/obj/sw/app/src/main.o
+ .rodata._ZZ17clear_spi_channelE12__FUNCTION__
+                0x0000000000403410       0x20 out/Adu/obj/sw/app/src/main.o
+ .rodata._ZZ12send_mcu_cmdE12__FUNCTION__
+                0x0000000000403430       0x10 out/Adu/obj/sw/app/src/main.o
  .rodata._ZZ18set_get_mcu_statusE12__FUNCTION__
-                0x00000000004033f0       0x20 out/Adu/obj/sw/app/src/main.o
+                0x0000000000403440       0x20 out/Adu/obj/sw/app/src/main.o
  .rodata.str1.8
-                0x0000000000403410       0xd7 sw/osal_hal/liboal_hal.a(spi_linux.o)
+                0x0000000000403460       0xd7 sw/osal_hal/liboal_hal.a(spi_linux.o)
                                          0xd8 (size before relaxing)
- *fill*         0x00000000004034e7        0x1 
+ *fill*         0x0000000000403537        0x1 
  .rodata.str1.8
-                0x00000000004034e8       0x48 sw/osal_hal/liboal_hal.a(hal_plock.o)
+                0x0000000000403538       0x48 sw/osal_hal/liboal_hal.a(hal_plock.o)
 
 .rodata1
  *(.rodata1)
 
-.eh_frame_hdr   0x0000000000403530       0x9c
+.eh_frame_hdr   0x0000000000403580       0x9c
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x0000000000403530       0x9c out/Adu/obj/sw/app/src/main.o
+ .eh_frame_hdr  0x0000000000403580       0x9c out/Adu/obj/sw/app/src/main.o
 
-.eh_frame       0x00000000004035d0      0x414
+.eh_frame       0x0000000000403620      0x414
  *(.eh_frame)
- .eh_frame      0x00000000004035d0      0x410 out/Adu/obj/sw/app/src/main.o
+ .eh_frame      0x0000000000403620      0x410 out/Adu/obj/sw/app/src/main.o
                                         0x3e8 (size before relaxing)
- .eh_frame      0x00000000004039e0        0x4 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../lib/gcc/aarch64-linux-gnu/4.9.1/crtend.o
+ .eh_frame      0x0000000000403a30        0x4 /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../lib/gcc/aarch64-linux-gnu/4.9.1/crtend.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
 
 .exception_ranges
  *(.exception_ranges .exception_ranges*)
-                0x00000000004039e4                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
+                0x0000000000403a34                . = (ALIGN (0x10000) - ((0x10000 - .) & 0xffff))
                 0x0000000000414000                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
 
 .eh_frame
@@ -584,13 +584,13 @@ LOAD /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x4893
+.debug_info     0x0000000000000000     0x48bd
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000     0x27a4 out/Adu/obj/sw/app/src/main.o
- .debug_info    0x00000000000027a4      0x697 sw/osal_hal/liboal_hal.a(ipcl.o)
- .debug_info    0x0000000000002e3b      0xecc sw/osal_hal/liboal_hal.a(spi_linux.o)
- .debug_info    0x0000000000003d07      0x2db sw/osal_hal/liboal_hal.a(CRC8.o)
- .debug_info    0x0000000000003fe2      0x8b1 sw/osal_hal/liboal_hal.a(hal_plock.o)
+ .debug_info    0x0000000000000000     0x27ce out/Adu/obj/sw/app/src/main.o
+ .debug_info    0x00000000000027ce      0x697 sw/osal_hal/liboal_hal.a(ipcl.o)
+ .debug_info    0x0000000000002e65      0xecc sw/osal_hal/liboal_hal.a(spi_linux.o)
+ .debug_info    0x0000000000003d31      0x2db sw/osal_hal/liboal_hal.a(CRC8.o)
+ .debug_info    0x000000000000400c      0x8b1 sw/osal_hal/liboal_hal.a(hal_plock.o)
 
 .debug_abbrev   0x0000000000000000      0xc3a
  *(.debug_abbrev)
@@ -600,13 +600,13 @@ LOAD /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../
  .debug_abbrev  0x0000000000000929      0x142 sw/osal_hal/liboal_hal.a(CRC8.o)
  .debug_abbrev  0x0000000000000a6b      0x1cf sw/osal_hal/liboal_hal.a(hal_plock.o)
 
-.debug_line     0x0000000000000000     0x1313
+.debug_line     0x0000000000000000     0x130b
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000      0x70e out/Adu/obj/sw/app/src/main.o
- .debug_line    0x000000000000070e      0x2ef sw/osal_hal/liboal_hal.a(ipcl.o)
- .debug_line    0x00000000000009fd      0x4de sw/osal_hal/liboal_hal.a(spi_linux.o)
- .debug_line    0x0000000000000edb       0xf6 sw/osal_hal/liboal_hal.a(CRC8.o)
- .debug_line    0x0000000000000fd1      0x342 sw/osal_hal/liboal_hal.a(hal_plock.o)
+ .debug_line    0x0000000000000000      0x706 out/Adu/obj/sw/app/src/main.o
+ .debug_line    0x0000000000000706      0x2ef sw/osal_hal/liboal_hal.a(ipcl.o)
+ .debug_line    0x00000000000009f5      0x4de sw/osal_hal/liboal_hal.a(spi_linux.o)
+ .debug_line    0x0000000000000ed3       0xf6 sw/osal_hal/liboal_hal.a(CRC8.o)
+ .debug_line    0x0000000000000fc9      0x342 sw/osal_hal/liboal_hal.a(hal_plock.o)
 
 .debug_frame    0x0000000000000000      0x528
  *(.debug_frame)
@@ -629,13 +629,13 @@ LOAD /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../
  .debug_str     0x0000000000001c49      0x19c sw/osal_hal/liboal_hal.a(hal_plock.o)
                                         0x519 (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x2abf
+.debug_loc      0x0000000000000000     0x2b1d
  *(.debug_loc)
- .debug_loc     0x0000000000000000     0x1597 out/Adu/obj/sw/app/src/main.o
- .debug_loc     0x0000000000001597      0x3f7 sw/osal_hal/liboal_hal.a(ipcl.o)
- .debug_loc     0x000000000000198e      0xa0f sw/osal_hal/liboal_hal.a(spi_linux.o)
- .debug_loc     0x000000000000239d      0x3e1 sw/osal_hal/liboal_hal.a(CRC8.o)
- .debug_loc     0x000000000000277e      0x341 sw/osal_hal/liboal_hal.a(hal_plock.o)
+ .debug_loc     0x0000000000000000     0x15f5 out/Adu/obj/sw/app/src/main.o
+ .debug_loc     0x00000000000015f5      0x3f7 sw/osal_hal/liboal_hal.a(ipcl.o)
+ .debug_loc     0x00000000000019ec      0xa0f sw/osal_hal/liboal_hal.a(spi_linux.o)
+ .debug_loc     0x00000000000023fb      0x3e1 sw/osal_hal/liboal_hal.a(CRC8.o)
+ .debug_loc     0x00000000000027dc      0x341 sw/osal_hal/liboal_hal.a(hal_plock.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -655,13 +655,13 @@ LOAD /home/wsj/share/code/gcc-linaro-aarch64-linux-gnu-4.9-2014.07_linux/bin/../
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0xaf0
+.debug_ranges   0x0000000000000000      0xb00
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000      0x700 out/Adu/obj/sw/app/src/main.o
- .debug_ranges  0x0000000000000700       0xa0 sw/osal_hal/liboal_hal.a(ipcl.o)
- .debug_ranges  0x00000000000007a0      0x270 sw/osal_hal/liboal_hal.a(spi_linux.o)
- .debug_ranges  0x0000000000000a10       0x40 sw/osal_hal/liboal_hal.a(CRC8.o)
- .debug_ranges  0x0000000000000a50       0xa0 sw/osal_hal/liboal_hal.a(hal_plock.o)
+ .debug_ranges  0x0000000000000000      0x710 out/Adu/obj/sw/app/src/main.o
+ .debug_ranges  0x0000000000000710       0xa0 sw/osal_hal/liboal_hal.a(ipcl.o)
+ .debug_ranges  0x00000000000007b0      0x270 sw/osal_hal/liboal_hal.a(spi_linux.o)
+ .debug_ranges  0x0000000000000a20       0x40 sw/osal_hal/liboal_hal.a(CRC8.o)
+ .debug_ranges  0x0000000000000a60       0xa0 sw/osal_hal/liboal_hal.a(hal_plock.o)
 
 .debug_macro
  *(.debug_macro)
